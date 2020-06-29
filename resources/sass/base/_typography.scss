@@ -2,12 +2,12 @@
 //==========  Typography ==========//
 
 // headings
-h1, h2, h3 {
-    @apply font-bold leading-tight mt-0 mb-6 text-purple-900;
+h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-tight mt-0 mb-6 text-black font-serif;
 }
 
 .page-title {
-	@apply text-5xl;
+	@apply text-5xl font-serif;
 }
 
 // content
@@ -19,7 +19,7 @@ h1, h2, h3 {
 
         // intro paragraph
 		&:first-child {
-			@apply border-b border-gray-200 text-2xl pb-10 mb-10 font-light leading-snug text-gray-600;
+			@apply border-b border-gray-200 text-2xl pb-10 mb-10 font-light leading-snug text-black;
 
 			@screen md {
                 @apply text-3xl;
