@@ -1,3 +1,2 @@
 # Forked version of Skeleventy
-
-For abromo.com
+Abromo.com Eleventy-powered website.
