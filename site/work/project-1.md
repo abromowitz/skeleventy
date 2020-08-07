@@ -1,6 +1,7 @@
 ---
 title: Buy, Gift, Transfer Miles
 date: 2019-10-12
+featured_image: /images/blog/post-2.jpg
 organization: American Airlines
 excerpt: Something goes here about the project.
 tags:

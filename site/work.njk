@@ -8,84 +8,78 @@ title: Work
 ---
 
 
-<main id="main" class="main inner-wide flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
+<main id="main" class="main flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
 
     <article id="container-centre" class="column centre flex-1">
-        <header>
-            <h1 class="page-title">Work</h1>
-        </header>
+      
+      <div class="inner-wide">
          <section id="container-centre" class="column centre flex-1" aria-label="Work">
+                <header>
+                    <h1 class="page-title text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl">{{ title }}</h1>
+                </header>
+            <div class="posts lg:flex flex-1">
 
-        <h1 class="page-title text-3xl md:text-center md:text-5xl mb-16 lg:mb-24 lg:text-6xl">{{ title }}</h1>
+                {% for post in collections.work %}
 
-        <div class="posts lg:flex flex-1">
+                    <article class="article-card mb-8 mx-4 flex-1 bg-white overflow-hidden rounded-lg shadow-lg">
 
-            {% for post in collections.work %}
+                        {# featured post image & category #}
+                        {% if post.data.featured_image %}
 
-                <article class="article-card mb-8 mx-4 flex-1 bg-white overflow-hidden rounded-lg shadow-lg">
+                            <a class="featured-image-link block relative overflow-hidden" href="{{ post.url }}">
 
-                    {# featured post image & category #}
-                    {% if post.data.featured_image %}
+                                {# category link #}
+                                <ul class="absolute bottom-0 left-0 flex p-8 z-10">
 
-                        <a class="featured-image-link block relative overflow-hidden" href="{{ post.url }}">
+                                    {% for item in post.data.tags %}
 
-                            {# category link #}
-                            <ul class="absolute bottom-0 left-0 flex p-8 z-10">
+                                        {%- if item != "work" -%}
 
-                                {% for item in post.data.tags %}
+                                            <li class="mr-2">
 
-                                    {%- if item != "work" -%}
+                                                <span class="inline-block bg-blue-500 px-4 py-2 text-white text-xs font-bold rounded">{{ item | capitalize }}</span>
 
-                                        <li class="mr-2">
+                                            </li>
 
-                                            <span class="inline-block bg-blue-500 px-4 py-2 text-white text-xs font-bold rounded">{{ item | capitalize }}</span>
+                                        {%- endif -%}
 
-                                        </li>
+                                    {% endfor %}
 
-                                    {%- endif -%}
+                                </ul>
 
-                                {% endfor %}
+                                <figure>
 
-                            </ul>
+                                    {# the 'data-lazy' attribute will lazy load your images in #}
+                                    {# the js uses the new Intersection Observer API, see ../modules/lazyload #}
+                                    {# it's not fully supported in some browsers, so proceed with caution! #}
+                                    {# the srcset attribute would be a nice addtion here as well...in a future update maybe :) #}
+                                    <img data-lazy="{{ post.data.featured_image }}" class="block" alt="{{ post.data.image_caption }}">
 
-                            <figure>
+                                </figure>
 
-                                {# the 'data-lazy' attribute will lazy load your images in #}
-                                {# the js uses the new Intersection Observer API, see ../modules/lazyload #}
-                                {# it's not fully supported in some browsers, so proceed with caution! #}
-                                {# the srcset attribute would be a nice addtion here as well...in a future update maybe :) #}
-                                <img data-lazy="{{ post.data.featured_image }}" class="block" alt="{{ post.data.image_caption }}">
+                            </a>
 
-                            </figure>
+                        {% endif %}
 
-                        </a>
+                        <div class="p-8">
 
-                    {% endif %}
-
-                    <div class="p-8">
-
-                        <h2 class="text-2xl mb-6"><a class="block text-blue-500 hover:text-blue-900" href="{{ post.url }}">{{ post.data.title }}</a></h2>
-
-                        <div class="text-sm text-gray-600 md:flex mb-4">
-
-                            <time datetime="{{ post.date }}">
-                                {{ post.date | dateDisplay }}
-                            </time>
+                            <h2 class="text-2xl mb-6"><a class="block text-blue-500 hover:text-blue-900" href="{{ post.url }}">{{ post.data.title }}</a></h2>
 
                         </div>
 
-                    </div>
+                    </article>
 
-                </article>
+                {% endfor %}
 
-            {% endfor %}
+            </div>
 
-        </div>
+        </section>
 
-    </section>
+    </div>
+
+    <div class="inner">
         <div class="content">
-           <p>Top will be portfolio work. Followed by UX process and introduction about this being some examples of my work / selected work.</p>
-            
+            <p>Top will be portfolio work. Followed by UX process and introduction about this being some examples of my work / selected work.</p>          
             <h1>Design approach</h1>
             <p>Research: One of my favorite parts of user experience is the ability to do research. The amount of time spent on research will of course depend on a client’s needs or the scope of a project. In some situations I might perform a competitive analysis where I review a competitor’s product to find positive and negative attributes. In other situation I might do a simple heuristic evaluation that involves finding usability issues in the design so that the issues can be resolved as part of an iterative user-centered design process. Researching best practices is also important to stay up to date with current design trends.</p>
             <p>Personas: To better relate to users and develop appropriate use case scenarios, I use personas. Personas are representations based off particular user or demographic groups.</p>
@@ -97,24 +91,21 @@ title: Work
             <p>Iterate: UX is best when designed in a collaborative team environment where I can seek feedback from others. Iteration is also based off usability testing and design review.</p>
             <p>Development: While not typically required, as a UX designer I might have to use HTML, CSS, and JavaScript to build a prototype of my design; however, improvements in prototyping tools have made this mostly unnecessary. To ease development, functional specification documents are helpful to define user interaction and system requirements. You might also redline proper measurements; this is especially important for responsive design to ensure consistency.</p>
             <p>Conclusion: For success and to reduce cost, it is important to begin the UX process early. The above is just a brief overview of my user experience design process and does not include every tool or method that I might use. My methodology might also vary from situation to situation.</p>
-                       
-         <h2 class="text-2xl">Skills</h2>
+                    
+            <h2 class="text-2xl">Skills</h2>
             <h2>Methodology</h2>
-                <p> Usability testing, Biometrics (eye tracking), Survey design and analysis, Interviews, Design thinking, Contextual inquiry, Personas, Participatory design, Card sorting, Heuristic evaluation, Competitive analysis</p>
-               
+            <p> Usability testing, Biometrics (eye tracking), Survey design and analysis, Interviews, Design thinking, Contextual inquiry, Personas, Participatory design, Card sorting, Heuristic evaluation, Competitive analysis</p>
             <h2>Software</h2>
-             <p> SMI BeGaze, SMI Experiment Center, UserTesting, Microsoft Excel, Qualtrics, IBM Tealeaf, Axure RP, Sketch, Figma, InVision </p>
-        
-         <h2 class="text-3xl"><a id="work"></a>Work</h2>
-           <ul class="mb-12 list-disc pl-4">
-             <li>Porfolio work will go here</li>
-             <li>The format of this section must be designed</li>
-             <li>This section will be generated by Eleventy based off the tag/category</li>
-             <li>I will need to design a work page template</li>
-            </ul>
-
+            <p> SMI BeGaze, SMI Experiment Center, UserTesting, Microsoft Excel, Qualtrics, IBM Tealeaf, Axure RP, Sketch, Figma, InVision </p>
+            <h2 class="text-3xl"><a id="work"></a>Work</h2>
+            <ul class="mb-12 list-disc pl-4">
+                <li>Porfolio work will go here</li>
+                <li>The format of this section must be designed</li>
+                <li>This section will be generated by Eleventy based off the tag/category</li>
+                <li>I will need to design a work page template</li>
+                </ul>
         </div>
-
-    </article>
+    </div>
+ </article>
 
 </main>

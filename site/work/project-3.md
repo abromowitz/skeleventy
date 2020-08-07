@@ -1,8 +1,9 @@
 ---
-title: Project 2
-date: 2020-01-22
-featured_image: /images/blog/post-1.jpg
-excerpt: Coming soon.
+title: Receipts
+date: 2019-08-14
+featured_image: /images/blog/post-3.jpg
+organization: American Airlines
+excerpt: Something goes here about the project.
 tags:
     - work
     - business
