@@ -1,5 +1,5 @@
 ---
-title: Example project
+title: Buy, Gift, Transfer Miles
 date: 2019-10-12
 organization: American Airlines
 excerpt: Something goes here about the project.
