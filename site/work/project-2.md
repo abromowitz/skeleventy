@@ -8,7 +8,7 @@ tags:
     - business
 ---
 
-This is an example of stuff.
+Hello, this is an example of stuff.
 
 ## Beginning stages
 

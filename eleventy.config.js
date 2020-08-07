@@ -40,6 +40,27 @@ module.exports = eleventyConfig => {
         return blogs.reverse()
 
     })
+    // End of blog collection
+
+      // Collections for Work
+      eleventyConfig.addCollection('work', collection => {
+
+        const work = collection.getFilteredByTag('work')
+
+        for( let i = 0; i < work.length; i++ ) {
+
+            const prevWorkPost = work[i - 1]
+            const nextWorkPost = work[i + 1]
+
+            work[i].data["prevWorkPost"] = prevWorkPost
+            work[i].data["nextWorkPost"] = nextWorkPost
+
+        }
+
+        return work.reverse()
+
+    })
+    // End of work collection
 
     // Layout aliases
     eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
