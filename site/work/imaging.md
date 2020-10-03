@@ -1,15 +1,14 @@
 ---
-title: Buy, Gift, Transfer Miles
-date: 2019-10-12
-featured_image: /images/blog/post-2.jpg
-organization: American Airlines
-excerpt: Something goes here about the project.
+title: Support service request
+date: 2018-01-22
+featured_image: /images/blog/post-1.jpg
+excerpt: Coming soon.
 tags:
     - work
     - business
 ---
-
-This is an example of stuff.
+Multinational imaging and printing equipment manufacturer 
+Hello, this is an example of stuff.
 
 ## Beginning stages
 

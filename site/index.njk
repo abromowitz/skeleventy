@@ -16,19 +16,17 @@ title: Scott Abromowitz
 
             <p>Hello, I'm Scott and I work at American Airlines as a Senior Product Designer and previously as a Senior User Researcher.</p>
 
-            <h2 class="text-3xl">Selected work</h2>
+            <h2 class="text-3xl">Selected works</h2>
 
-            <ul class="mb-6">                
+            <ul class="mb-4">  
+                          
                 {% set select_work = collections.work %}
                 {# Select number of works to show #}
                 {% for post in select_work.slice(0,3) %} 
-                     <li class="md:text-2xl mb-2"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+                     <li class="md:text-xl mb-2"><a href="{{ post.url }}">{{ post.data.title }}</a></li>
                  {% endfor %}
-                
-                <li class="md:text-2xl mb-2">Build out <strong>H1 to H6 headings</strong></li>
-
             </ul>
-            <div class="text-sm md:text-lg"><a href="/work" alt="View more of my work">View more of my work</a></div>
+            <div class="text-sm md:text-base"><a href="/work" alt="View more of my work">View more of my work →</a></div>
         </div>
 
     </section>
