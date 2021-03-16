@@ -22,5 +22,8 @@
     "sass-loader": "^8.0.0",
     "tailwindcss": "^1.4.6",
     "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001200"
   }
 }
